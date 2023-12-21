@@ -15,7 +15,7 @@ public class server {
         int port = 60000;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
 
-        server.createContext("/hello", new HelloHandler());
+        server.createContext("/kyle-server", new HelloHandler());
 
         server.start();
 
@@ -24,7 +24,7 @@ public class server {
             System.out.println("Server stopped");
         }));
 
-        System.out.println("Server is on port " + port + ", The address is http://localhost:60000/hello");
+        System.out.println("Server is on port " + port + ", The address is http://localhost:60000/kyle-server");
     }
 
     static class HelloHandler implements HttpHandler {
